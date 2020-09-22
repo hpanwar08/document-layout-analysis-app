@@ -14,3 +14,7 @@ Simple docker deployment of document layout analysis using detectron2. Trained o
 * Type `localhost:3000` in browser and upload and image
 
 Note: It takes time to build the image
+
+| <img src="assets/images/1.jpg" width=400> | <img src="assets/images/2.jpg" width=400> |
+|---------------------------------------------------------------------------|---------------------------------------------------------------------------|
+
