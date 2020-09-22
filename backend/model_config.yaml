@@ -1,0 +1,9 @@
+categories:
+  - "text"
+  - "title"
+  - "list"
+  - "table"
+  - "figure"
+
+cfg_file: DLA_mask_rcnn_R_101_FPN_3x.yaml
+model_file: model_final_trimmed.pth

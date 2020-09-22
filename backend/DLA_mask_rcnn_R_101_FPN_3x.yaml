@@ -1,0 +1,20 @@
+# _BASE_: "Base-RCNN-FPN.yaml"
+_BASE_: "/app/lib/python3.8/site-packages/detectron2/model_zoo/configs/Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "detectron2://COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x/138205316/model_final_a3ec72.pkl"
+  MASK_ON: True
+  RESNETS:
+    DEPTH: 101
+  ROI_HEADS:
+    NUM_CLASSES: 5
+DATASETS:
+  TRAIN: ("dla_train",)
+  TEST: ("dla_val",)
+SOLVER:
+  STEPS: (210000, 250000)
+  MAX_ITER: 270000
+  IMS_PER_BATCH: 4
+  BASE_LR: 0.00025
+DATALOADER:
+  NUM_WORKERS: 1
+
