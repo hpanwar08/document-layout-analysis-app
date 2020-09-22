@@ -15,6 +15,6 @@ Simple docker deployment of document layout analysis using detectron2. Trained o
 
 Note: It takes time to build the image
 
-| <img src="assets/images/1.jpg" width=400> | <img src="assets/images/2.jpg" width=400> |
+| <img src="assets/images/1.JPG" width=400> | <img src="assets/images/2.JPG" width=400> |
 |---------------------------------------------------------------------------|---------------------------------------------------------------------------|
 
