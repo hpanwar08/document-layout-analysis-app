@@ -90,16 +90,6 @@ export default class UploadForm extends Component {
                 </Toast>
 
             </div>
-
-
-            // <Toast>
-            //     <Toast.Header>
-            //         {/* <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" /> */}
-            //         <strong className="mr-auto">Error</strong>
-            //         <small>{this.state.errorMessage}</small>
-            //     </Toast.Header>
-            //     <Toast.Body>{this.state.errorMessage}</Toast.Body>
-            // </Toast>
         )
     }
 
@@ -142,9 +132,6 @@ export default class UploadForm extends Component {
                         <Spinner animation="grow" variant="info" />
                         <Spinner animation="grow" variant="dark" />
                     </Row>
-                    {/* <div>
-                    <ProgressBar variant="danger" animated now={100} />
-                    </div> */}
                 </Container>
             )
         }

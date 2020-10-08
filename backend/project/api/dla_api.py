@@ -19,7 +19,9 @@ def analyse_image_json():
 
     print(f"Image shape: {image.shape}")
 
-    if image.shape[2] == 4:
+    if len(image.shape) == 2:
+        image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
+    elif image.shape[2] == 4:
         image = cv2.cvtColor(image, cv2.COLOR_BGRA2BGR)
 
     json_data = make_predictions(image, True)
