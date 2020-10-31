@@ -25,7 +25,7 @@ services:
     hostname: dla_react
 
     build:
-      context: frontend2
+      context: frontend
       dockerfile: Dockerfile
     
     ports:

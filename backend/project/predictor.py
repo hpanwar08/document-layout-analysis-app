@@ -12,6 +12,12 @@ from detectron2.data import MetadataCatalog
 from detectron2.structures.boxes import Boxes
 from project.d2predictor import VisualizationDemo
 
+from project.file_utils import download_file
+
+
+MODEL_DOWNLOAD_URL = "https://www.dropbox.com/sh/wgt9skz67usliei/AABPmqM77ERycAd87vubWc4Ua/model_final_trimmed.pth?dl=1"
+
+
 with open(pathlib.Path().parent / "model_config.yaml") as f:
     model_config = yaml.full_load(f)
 
@@ -34,6 +40,11 @@ def prepare_predictor():
     cfg.MODEL.DEVICE = "cpu"
 
     MetadataCatalog.get("dla_val").thing_classes = classes
+
+    if not pathlib.Path(model_weights).exists():
+        print(f"Downloading {model_weights}...")
+        download_file(MODEL_DOWNLOAD_URL, model_weights)
+        print("Download complete!")
     
     predictor = VisualizationDemo(cfg)
     print("Predictor has been initialized.")
