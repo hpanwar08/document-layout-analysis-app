@@ -23,7 +23,7 @@ RUN apt-get update -y \
     && apt-get -y install \
     git \
     build-essential=12.6 \
-    libglib2.0-0=2.58.3-2+deb10u2 \
+    libglib2.0-0 \
     libsm6=2:1.2.3-1 \
     libxext6=2:1.3.3-1+b2 \
     libxrender-dev=1:0.9.10-1 \
